@@ -120,5 +120,5 @@ This project relies on the fantastic work done by the [LinuxForHealth HL7 to FHI
 ---
 
 ## License
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
