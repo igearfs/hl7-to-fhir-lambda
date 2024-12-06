@@ -1,0 +1,74 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+out/
+
+# Maven-specific files
+target/
+*.log
+dependency-reduced-pom.xml
+release.properties
+
+# AWS Lambda-related
+build/
+.aws-sam/
+*.aws-sam-cli-managed.yaml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+*.log.*
+
+# Compiled files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Eclipse files (if imported)
+.project
+.classpath
+.settings/
+
+# Exclude test results
+test-output/
+*.junit.xml
+
+# Ignore .env files
+.env
+.env.*
+
+# Exclude IDE cache files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/modules.xml
+.idea/.idea_modules/
+.idea/vcs.xml
+.idea/libraries/
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/sqlDataSources.xml
+.idea/dictionaries/
+.idea/dataSources.xml
+.idea/dataSources.ids
+.idea/dataSources.local.xml
+.idea/sqlDataSources.ids
+.idea/sqlDataSources.xml
+.idea/gradle.xml
+.idea/tasks.xml
+.idea/inspectionProfiles/
+
+# Exclude IntelliJ-specific artifacts
+*.ipr
+*.iws
