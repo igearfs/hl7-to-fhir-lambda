@@ -70,6 +70,7 @@ hl7-to-fhir-lambda/
    ```
 
 3. Deploy the Lambda function:
+   - create a folder called code in the docker folder to put the extracted package .jar files into
    - extract the hl7-to-fhir-lambda.jar from the target directory into docker/code directory
    - use your IDE to run the docker-compose.yml
      - IF no ide go into the docker folder and run docker-compose up --build
