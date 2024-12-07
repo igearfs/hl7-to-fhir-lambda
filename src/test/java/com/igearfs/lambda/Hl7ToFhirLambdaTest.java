@@ -1,5 +1,5 @@
 /*
- * Sponsored by In-Game Event, A Red Falg Syndicate LLC.
+ * Sponsored by In-Game Event, A Red Flag Syndicate LLC.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package com.example.lambda;
+package com.igearfs.lambda;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,7 +23,7 @@ class Hl7ToFhirLambdaTest {
     @Test
     void testHandleRequest() {
         Hl7ToFhirLambda lambda = new Hl7ToFhirLambda();
-        String hl7Message = "MSH|^~\\&|HOSPITAL|LAB|HL7TOFHIR|202312060830|||ADT^A08|MSG00001|P|2.5\r\n" +
+        String hl7Message = "MSH|^~\\\\&|HOSPITAL|LAB|HL7TOFHIR|202312060830|||ADT^A08|MSG00001|P|2.5\r\n" +
                 "PID||123456|7890||DOE^JOHN";
         String result = lambda.handleRequest(hl7Message, null);
         System.out.println(result);

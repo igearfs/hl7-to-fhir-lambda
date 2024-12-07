@@ -30,6 +30,10 @@ For a complete list, see the [LinuxForHealth documentation](https://github.com/L
 ```plaintext
 hl7-to-fhir-lambda/
 ├── pom.xml                    # Maven project configuration
+├── docker
+│   ├── code                   # this is where the jar from shade is extracted into
+│   └── docker-compose.yml     # Runs the docker container
+│   └── Dockerfile             # Docker file to build AWS Lambda container
 ├── src/
 │   ├── main/
 │   │   └── java/
@@ -46,7 +50,35 @@ hl7-to-fhir-lambda/
 
 ---
 
-## Getting Started
+## Getting Started LOCAL DOCKER
+### Prerequisites
+- Java 11 or later
+- Maven
+- Docker Desktop or if linux docker-compose and docker
+- 
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd hl7-to-fhir-lambda
+   ```
+
+2. Build the project using Maven:
+   ```bash
+   mvn clean package
+   ```
+
+3. Deploy the Lambda function:
+   - extract the hl7-to-fhir-lambda.jar from the target directory into docker/code directory
+   - use your IDE to run the docker-compose.yml
+     - IF no ide go into the docker folder and run docker-compose up --build
+   - run TestLambdaAfterDockerIdUp to test.
+
+---
+
+
+## Getting Started AWS
 
 ### Prerequisites
 - Java 11 or later
@@ -68,10 +100,10 @@ hl7-to-fhir-lambda/
    ```
 
 3. Deploy the Lambda function:
-   - Upload the `.jar` file in `target/` to AWS Lambda.
+   - Upload the shade `.jar` file in `target/` to AWS Lambda.
    - Set the handler to:
      ```plaintext
-     com.example.lambda.Hl7ToFhirLambda::handleRequest
+     com.igearfs.lambda.Hl7ToFhirLambda::handleRequest
      ```
 
 ---

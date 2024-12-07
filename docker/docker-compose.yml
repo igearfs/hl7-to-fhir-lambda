@@ -1,0 +1,21 @@
+
+# Docker Compose configuration for running AWS Lambda function locally
+
+version: '3.8'
+
+services:
+  # Lambda function service
+  hl7-to-fhir-lambda:
+    build:
+      # Specify the build context and Dockerfile
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      # Expose the Lambda runtime API port
+      - "9000:8080"
+    environment:
+      # AWS Lambda-specific environment variables
+      - AWS_LAMBDA_FUNCTION_NAME=hl7-to-fhir-lambda
+    command:
+      # Lambda handler for the Java function
+      - "com.igearfs.lambda.Hl7ToFhirLambda::handleRequest"

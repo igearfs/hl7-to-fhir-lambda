@@ -1,5 +1,5 @@
 /*
- * Sponsored by In-Game Event, A Red Falg Syndicate LLC.
+ * Sponsored by In-Game Event, A Red Flag Syndicate LLC.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-package com.example.lambda;
+package com.igearfs.lambda;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
@@ -33,6 +33,7 @@ public class Hl7ToFhirLambda implements RequestHandler<String, String> {
     @Override
     public String handleRequest(String hl7Message, Context context) {
         try {
+            System.out.println(hl7Message);
             // Use LinuxForHealth HL7 to FHIR Converter
             HL7ToFHIRConverter converter = new HL7ToFHIRConverter();
             String fhirJson = converter.convert(hl7Message);
@@ -44,6 +45,7 @@ public class Hl7ToFhirLambda implements RequestHandler<String, String> {
             }
             return fhirJson;
         } catch (Exception e) {
+            e.printStackTrace();
             if(context != null) {
                 context.getLogger().log("Error converting HL7 to FHIR: " + e.getMessage());
             }
