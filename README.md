@@ -1,6 +1,10 @@
 Warning
 
-This project has not yet been tested on AWS Lambda. While the code is designed for Lambda deployment, it is recommended to test thoroughly in an AWS environment before using it in production.
+This project has not yet been tested on AWS Lambda.Tested locally in docker.
+While the code is designed for Lambda deployment, it is recommended to test thoroughly in an AWS environment before using it in production.
+and for PHI Make sure you are over HTTPS and follow HIPAA. 
+
+probably should add logging and storage into a database as well to follow compliance.
 
 # HL7 to FHIR Lambda Function
 
