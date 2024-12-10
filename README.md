@@ -156,6 +156,31 @@ This project relies on the fantastic work done by the [LinuxForHealth HL7 to FHI
 
 ---
 
-## License
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+# Project Name
 
+[Brief description of the project and its purpose.]
+
+---
+
+## License
+
+This program is licensed under the **Server Side Public License (SSPL), Version 1**, with additional terms as outlined below:
+
+- **Commercial Use**:
+   - Any use of this software in a commercial capacity, including offering it as part of a managed service or SaaS product, requires a commercial license agreement with **In-Game Event, A Red Flag Syndicate LLC**.
+   - To obtain a commercial license, contact: [licence_request@igearfs.com](mailto:licence_request@igearfs.com).
+
+- **Non-Commercial Use**:
+   - If you choose not to obtain a commercial license, you must comply with the SSPL terms. This includes making publicly available the source code for all programs, tooling, and infrastructure used to operate this software as a service.
+
+---
+
+## No Warranty
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+For licensing inquiries, contact:
+- **License Requests**: [licence_request@igearfs.com](mailto:licence_request@igearfs.com)
+- **General Inquiries**: [contact@igearfs.com](mailto:contact@igearfs.com)
+
+For more details, refer to the full text of the **Server Side Public License (SSPL)** at [https://www.mongodb.com/licensing/server-side-public-license](https://www.mongodb.com/licensing/server-side-public-license).
